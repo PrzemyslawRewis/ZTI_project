@@ -1,0 +1,19 @@
+version: '3'
+services:
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    environment:
+      DB_HOST: dumbo.db.elephantsql.com
+      DB_PORT: 5432
+      DB_NAME: iypnmdkf
+      DB_USERNAME: iypnmdkf
+      DB_PASSWORD: KJOeDWINc6IajmfBGQt7SePXqZ51_IwD 
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
